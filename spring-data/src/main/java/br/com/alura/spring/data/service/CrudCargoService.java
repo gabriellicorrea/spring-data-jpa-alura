@@ -82,6 +82,11 @@ public class CrudCargoService {
 		cargos.forEach(cargo -> System.out.println(cargo));
 	}
 
-
+	private void deletar(Scanner scanner) {
+		System.out.println("Id");
+		int id = scanner.nextInt();
+		cargoRepository.deleteById(id);
+		System.out.println("Deletado");
+	}
 
 }
